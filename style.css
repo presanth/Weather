@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wethercontainer{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./image/img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* transition: all 2s ease-in; */
+}
+.wetherbox{
+    width: 40%;
+    height: 7rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#0000004a;
+
+}
+.wetherbox input{
+    width: 70%;
+    height: 2.7rem;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1.2rem;
+    outline: none;
+    color: white;
+}
+.wetherbox input::placeholder{
+    color:white;
+    font-weight: 700;
+}
+#error{
+    position: absolute;
+    display: none;
+    margin-top: 5.2rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+#nodata{
+    display: none;
+    margin-top: -4rem;
+    font-size: 1.7rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.wetherbox button{
+    width: 2.5rem;
+    height: 2.5rem;
+    background: transparent;
+    border:none;
+    border-radius: 7px;
+    color: white;
+    font-weight: 700;
+    margin-left: -2.7rem;
+    font-size: 1.4rem;
+    padding: .1rem;
+}
+.wetherbox button:hover{
+    background: red;
+    border-radius: 50%;
+}
+#clouds{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -7rem;
+}
+#clouds img{
+    width: 6.5rem;
+}
+#clouds p{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: cursive;
+    color: white;
+    margin-top: -3rem;
+}
+#city{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -6rem;
+}
+.degree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.degree .tp{
+    font-size: 5.7rem;
+    font-family: monospace;
+    font-weight: 800;
+    color: white;
+}
+.tp sup{
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-weight: 900;
+    font-family: sans-serif;
+    color: white;
+}
+.date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.date1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.date1 .cn{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: cursive;
+    color: white;
+}
+.date1 .timeday{
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: cursive;
+    color: white;
+}
+#resultbox{
+    width: 50%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background:#07bfff21;
+    margin-bottom: 7rem;
+    border-radius: 10px;
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contents i{
+    font-size: 2rem;
+    color: white;
+}
+.contents .wethervalue{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: white;
+    
+}
+.contents .type{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    font-family: cursive;
+}
+
+/* Animation */
+
+
+.mar{
+    margin-top: 18rem;
+}
+.anim{
+    animation-name: example;
+    animation-duration: 2s;
+}
+@keyframes example {
+    0%   { margin-top:18rem;}
+    100% { margin-top:1rem;}
+}
+.dani{
+    animation-name: danim;
+    animation-duration: 12s;
+    animation-delay: 1s;
+}
+@keyframes danim {
+    0%   { display: none;}
+    100% { display: flex;}
+}
+
+
+
+
+
+
+/* i{
+    color:#ffffffc9;
+    font-size: 7rem;
+} */
+@media(max-width:1200px){
+    #resultbox{
+        width: 79%;
+    }
+}
+@media(max-width:768px){
+    .wethercontainer{
+        background-image: url('./image/download.png'); 
+        background-size: cover;
+    }
+    .wetherbox{
+        width: 95%;
+        background: transparent;
+        align-items: start;
+    }
+    .wetherbox input{
+        width: 80%;
+    }
+    .wetherbox button{
+        margin-top: 3px;
+    }
+    #nodata{
+        font-size: 1.5rem;
+        text-align: center;        
+    }
+    #clouds{
+        margin-top: -8rem;
+    }
+    #clouds img{
+        width: 6rem;
+    }
+    #clouds p{
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-top: -2rem;
+        font-family: monospace;
+    }
+    #city{
+        margin-top: -2rem;
+    }
+    .degree .tp{
+        font-size: 4.7rem;
+        font-weight: 700;
+    }
+    .tp sup{
+        font-size: 1.8rem;
+        font-weight: 800;
+        position: relative;
+        top: -16px;
+    }
+    .date1 .cn{
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: monospace;
+    }
+    .date1 .timeday{
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-family: monospace;
+    }
+    #resultbox{
+        width: 80%;
+        height: auto;
+        flex-wrap: wrap;
+        margin-bottom: 7rem;
+    }
+    .contents{
+        margin: .5rem;
+    }
+    .contents i{
+        font-size: 1.7rem;
+    }
+    .contents .wethervalue{
+        font-size: 1.6rem;
+        margin: .3rem 0;
+    }
+    .contents .type{
+        font-size: 1.4rem;
+        font-family: monospace;
+    }
+
+    @media(max-width:358px){
+        #clouds{
+            margin-top: -6rem;
+        }
+        #clouds img{
+            width: 5rem;
+        }
+        #clouds p{
+            font-size: 2rem;
+            margin-top: -1rem;
+        }
+        .degree .tp{
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .tp sup{
+            font-size: 1.4rem;
+            top: -14px;
+        }
+        .date1 .cn{
+            font-size: 1.7rem;
+        }
+        .date1 .timeday{
+            font-size: 1rem;
+        }
+        #resultbox{
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+

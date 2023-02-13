@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wether App</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/2265084165.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wethercontainer">
+        <!-- <i class="fa-solid fa-cloud"></i> -->
+        <div class="wetherbox">
+            <input type="text"  name="nameCity" id="nameCity" placeholder="Enter Your City">
+            <button type="submit" onclick="findWether()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <p id="error">invalid City Name</p>
+        </div>
+        <p id="nodata"> weather data not available...</p>
+        <div id="clouds"></div>
+        <div id="city"></div>
+        <div id="resultbox">
+        </div>
+    </div>
+</body>
+
+<script src="./weather.js"></script>
+</html>
